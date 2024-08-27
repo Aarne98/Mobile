@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Exam Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exam Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etExamTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter exam title"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/tvQuestionCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Questions Created: 0"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Start Creating Questions Button -->
+        <Button
+            android:id="@+id/btnStartCreatingQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Creating Questions"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Question Type Selection (Initially Hidden) -->
+        <LinearLayout
+            android:id="@+id/questionTypeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Question Type"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnChooseMcQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiple Choice Question"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnChooseOpenQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Question"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+        <!-- Multiple Choice Question Section (Initially Hidden) -->
+        <LinearLayout
+            android:id="@+id/mcQuestionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multiple Choice Question"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etMcQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter multiple-choice question"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Choices for Multiple Choice -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etMcChoice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Choice 1"
+                    android:inputType="text"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etMcChoice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Choice 2"
+                    android:inputType="text"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etMcChoice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Choice 3"
+                    android:inputType="text"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etMcChoice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Choice 4"
+                    android:inputType="text"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+            <!-- Correct Answer for Multiple Choice -->
+            <EditText
+                android:id="@+id/etMcCorrectAnswerIndex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the correct answer index (1-4)"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Add Question Button -->
+            <Button
+                android:id="@+id/btnAddMcQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Question"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+        <!-- Open Question Section (Initially Hidden) -->
+        <LinearLayout
+            android:id="@+id/openQuestionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Question"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etOpenQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter open question"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etOpenAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter answer for open question"
+                android:inputType="text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Add Question Button -->
+            <Button
+                android:id="@+id/btnAddOpenQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Question"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+        <!-- Submit Exam Button -->
+        <Button
+            android:id="@+id/btnSubmitExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Exam"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Exam Title -->
+    <TextView
+        android:id="@+id/tvExamTitle"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDeleteExam"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:padding="4dp"
+        android:text="X"
+        android:textColor="@android:color/white" />
+
+    <!-- Add Users Button -->
+    <Button
+        android:id="@+id/btnAddUsers"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:padding="4dp"
+        android:text="+👤"
+        android:textColor="@android:color/white" />
+
+    <!-- View Results Button -->
+    <Button
+        android:id="@+id/btnViewResults"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:padding="4dp"
+        android:text="Results"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
